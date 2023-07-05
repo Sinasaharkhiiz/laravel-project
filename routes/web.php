@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Course;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/courses', function () {
     $c_data = Course::all();
     return view('courses', ['c_data'=> $c_data]);
 });
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -53,6 +55,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/add_course',[CoursController::class, 'add_course']);
+    Route::get('/course', function () {
+        $c_data = Course::find($_GET['id']);
+        $p_data = User::find($c_data->publisher_id);
+        return view('course', ['c_data'=> $c_data,'p_data'=>$p_data]);
+    });
 });
 
 require __DIR__.'/auth.php';

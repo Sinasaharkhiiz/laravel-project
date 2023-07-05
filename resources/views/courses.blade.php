@@ -18,9 +18,9 @@
                       {{$value->name}}  
                     </div>
                     <div class="box-text">
-                       سینا سحرخیز
+                        {{$value->description}} 
                     </div>
-                    <a href="#" target="_blank">ادامه</a>
+                    <a href="course?id={{$value->id}}" target="_blank">ادامه</a>
                 </div>
             </div>
         </div>	
