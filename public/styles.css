@@ -22,6 +22,7 @@ html {
 body {
     padding-top: 80px;
     padding-bottom: 100px;
+    background-image: url("pic1.jpg");
 }
 
 .footer {

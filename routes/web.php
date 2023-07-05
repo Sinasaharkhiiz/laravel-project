@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\CoursController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,14 +44,15 @@ Route::get('logout', function ()
     return view('home');
 })->name('logout');
 
-Route::get('/home', function () {
-    return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+Route::get('/add_course', function () {
+    return view('add_course');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/add_course',[CoursController::class, 'add_course']);
 });
 
 require __DIR__.'/auth.php';
