@@ -23,7 +23,7 @@
         </div>
         
         <div class="form-group">
-        <h3  style=" margin-right:20px;margin-top:50px;">منتشر کننده : {{$p_data->name}}</h3>
+        <h3  style=" margin-right:20px;margin-top:50px;">.</h3>
         </div>
         <hr>
         <div class="form-group">
