@@ -1,7 +1,7 @@
-<img src="/art/preview.png" style="width:100%;" />
+<!--<img src="/art/preview.png" style="width:100%;" />
 
 This is a Laravel demo app for [Chatify](https://github.com/munafio/chatify).
-
+-->
 ## Quick Start
 
 -   Clone or download this repo and place it into your server.
