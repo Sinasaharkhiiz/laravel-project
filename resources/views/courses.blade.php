@@ -13,15 +13,24 @@
                 <div class="box-header box-header-one">
                     <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
                 </div>
-                <div class="box-bottom">
+                <div class="box-bottom" style="padding-bottom: 10px;">
+                    <a href="course?id={{$value->id}}" target="_blank">
                     <div class="box-title one-title">
                       {{$value->name}}  
                     </div>
+                </a>
                     <div class="box-text">
                         {{$value->description}} 
+                        <hr>
+                        @if($value->price==0)
+                           <p><strong> رایگان </strong></p>
+                        @else
+                        <p><strong>{{"قیمت :".$value->price." "."تومان"}}</strong></p> 
+                        @endif
                     </div>
-                    <a href="course?id={{$value->id}}" target="_blank">ادامه</a>
+                    
                 </div>
+                
             </div>
         </div>	
         @endforeach

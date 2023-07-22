@@ -3,9 +3,9 @@
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView {{ !!$id ? 'conversation-active' : '' }}">
         {{-- Header and search bar --}}
-        <div class="m-header">
+        <div class="m-header" style="margin-bottom: 10px;">
             <nav>
-                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">MESSAGES</span> </a>
+                <a href="#"><div class="avatar av-m"style="background-image: url({{'storage/users-avatar/'.Auth::user()->avatar}});"></div> <span style="margin-left: 0;" class="messenger-headTitle">{{Auth::user()->name}}</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>

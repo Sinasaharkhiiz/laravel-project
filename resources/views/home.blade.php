@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<div style="margin-top:170px;">
+<div style="margin-top:20px;">
+    <img src="pic2.png " style="margin-right: 465px; width: 200px;">
     <h2 style="margin-right: 336px; color:aliceblue">
    ------پروژه مهندسی نرم افزار------
    </h2>

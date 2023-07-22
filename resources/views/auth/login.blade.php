@@ -56,7 +56,7 @@
                                 <button type="submit" name="login" class="btn btn-primary" style="    background-image: linear-gradient(to bottom, #133f64 0%, #265a88 100%);">ورود</button>
                             </div>
                             <p style="   padding-top: 8px;"> هنوز عضو نشده اید؟
-                                <a href= "regiister">ثبت نام کنید</a>
+                                <a href= "register">ثبت نام کنید</a>
                             </p>
                         </div>
                     </form>
